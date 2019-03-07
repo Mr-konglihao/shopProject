@@ -67,15 +67,17 @@
 							if(this.$route.query.url){
 								this.$router.push(this.$route.query.url)
 							}else{
-								this.$router.push("/")
+                                this.$router.push("/");
+                                this.login_user='';
+                                this.login_pwd='';
 							}
 						}
 					})
 
 				}else{
 
-					this.$alert("sorry,err","response",{
-						confirmButtonText: 'I see'
+					this.$alert("登录失败","提示",{
+						confirmButtonText: '确定'
 					})
 
 				}
@@ -116,7 +118,9 @@
 					this.$alert("注册成功，去登陆","提示",{
 						confirmButtonText: '确定',
 						callback:()=>{
-							this.flag=true
+                            this.flag=true;
+                            this.reg_user='';
+                            this.reg_pwd='';
 						}
 					})
 

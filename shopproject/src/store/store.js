@@ -4,7 +4,7 @@ Vue.use(vuex)
 export default new vuex.Store({
     state:{
         loading:false,
-        store:''
+        token:''
     },
     mutations:{
         loading_show(state){
@@ -13,7 +13,7 @@ export default new vuex.Store({
         loading_hide(state){
             state.loading=false;
         },
-        updata_token(state,a){
+        update_token(state,a){
             state.token=a;
             localStorage.token=a;
         }
